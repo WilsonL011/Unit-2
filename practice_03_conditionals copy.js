@@ -13,8 +13,22 @@
 //   "positive odd"    if num is positive and odd
 //   "negative even"   if num is negative and even
 //   "negative odd"    if num is negative and odd
-function classifyNumber(num) {
-  // TODO: your code here
+function  classifyNumber(num){
+    if (num == 0){
+        return "zero";
+    }
+    else if (num > 0 && num %2 == 0){
+        return "positive even";
+    }
+    else if (num > 0 && num %2 !== 0){
+        return "positive odd";
+    }
+     else if (num < 0 && num %2 == 0){
+        return "negative even";
+    }
+    else if (num < 0 && num %2 !== 0){
+        return "negative odd";
+    }
 }
 
 console.log(classifyNumber(0)); // "zero"
@@ -31,8 +45,19 @@ console.log(classifyNumber(-7)); // "negative odd"
 //   60-69   -> "D"
 //   below 60 -> "F"
 // If score is less than 0 or greater than 100, return "Invalid score".
-function getLetterGrade(score) {
-  // TODO: your code here
+function getLetterGrade(score){
+  if (score <0 || score > 100)
+    return "Invalid Score";
+  else if (score >= 90)
+    return "A";
+  else if (score >= 80)
+    return "B";
+  else if (score >= 70)
+    return "C";
+  else if (score >= 60)
+    return "D";
+  else 
+    return "F";
 }
 
 console.log(getLetterGrade(95)); // "A"
@@ -40,6 +65,7 @@ console.log(getLetterGrade(82)); // "B"
 console.log(getLetterGrade(59)); // "F"
 console.log(getLetterGrade(-5)); // "Invalid score"
 console.log(getLetterGrade(150)); // "Invalid score"
+
 
 // ---------- Problem 3: FizzBuzz ----------
 // Return:
